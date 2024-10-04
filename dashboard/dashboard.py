@@ -22,11 +22,11 @@ district = st.sidebar.selectbox(
 
 # load data tanpa musim
 def load_data():
-    df_aotizhongxin = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/df_aotizhongxin_new.csv')
-    df_changping = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/df_changping_new.csv')
-    df_dongsi = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/df_dongsi_new.csv')
-    df_shunyi = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/df_shunyi_new.csv')
-    df_tiantan = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/df_tiantan_new.csv')
+    df_aotizhongxin = pd.read_csv('rivaardianssyah/Proyek-Analisis-Data/dashboard/df_aotizhongxin_new.csv')
+    df_changping = pd.read_csv('rivaardianssyah/Proyek-Analisis-Data/dashboard/df_changping_new.csv')
+    df_dongsi = pd.read_csv('rivaardianssyah/Proyek-Analisis-Data/dashboard/df_dongsi_new.csv')
+    df_shunyi = pd.read_csv('rivaardianssyah/Proyek-Analisis-Data/dashboard/df_shunyi_new.csv')
+    df_tiantan = pd.read_csv('rivaardianssyah/Proyek-Analisis-Data/dashboard/df_tiantan_new.csv')
     
     df_aotizhongxin['District'] = 'Aotizhongxin'
     df_changping['District'] = 'Changping'
@@ -93,11 +93,11 @@ def musim_avg(df, district_name):
     }).reset_index().assign(District=district_name)
 
 # load data
-df_aotizhongxin_new = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/df_aotizhongxin_new.csv')
-df_changping_new = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/df_changping_new.csv')
-df_dongsi_new = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/df_dongsi_new.csv')
-df_shunyi_new = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/df_shunyi_new.csv')
-df_tiantan_new = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/df_tiantan_new.csv')
+df_aotizhongxin_new = pd.read_csv('rivaardianssyah/Proyek-Analisis-Data/dashboard/df_aotizhongxin_new.csv')
+df_changping_new = pd.read_csv('rivaardianssyah/Proyek-Analisis-Data/dashboard/df_changping_new.csv')
+df_dongsi_new = pd.read_csv('rivaardianssyah/Proyek-Analisis-Data/dashboard/df_dongsi_new.csv')
+df_shunyi_new = pd.read_csv('rivaardianssyah/Proyek-Analisis-Data/dashboard/df_shunyi_new.csv')
+df_tiantan_new = pd.read_csv('rivaardianssyah/Proyek-Analisis-Data/dashboard/df_tiantan_new.csv')
 
 # buat data baru guna menghitung rata-rata per musim
 df_aotizhongxin_avg = musim_avg(df_aotizhongxin_new, 'Aotizhongxin')
