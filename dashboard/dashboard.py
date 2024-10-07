@@ -19,11 +19,11 @@ Dua pertanyaan bisnis yang akan dijawab adalah:
 st.subheader("Data Wragling")
 
 def load_data():
-    df_aotizhongxin = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/Proyek Analisis Data/df_aotizhongxin_new.csv')
-    df_changping = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/Proyek Analisis Data/df_changping_new.csv')
-    df_dongsi = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/Proyek Analisis Data/df_dongsi_new.csv')
-    df_shunyi = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/Proyek Analisis Data/df_shunyi_new.csv')
-    df_tiantan = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/Proyek Analisis Data/df_tiantan_new.csv')
+    df_aotizhongxin = pd.read_csv('dashboard/df_aotizhongxin_new.csv')
+    df_changping = pd.read_csv('dashboard/df_changping_new.csv')
+    df_dongsi = pd.read_csv('dashboard/df_dongsi_new.csv')
+    df_shunyi = pd.read_csv('dashboard/df_shunyi_new.csv')
+    df_tiantan = pd.read_csv('dashboard/df_tiantan_new.csv')
 
     df_aotizhongxin['district'] = 'Aotizhongxin'
     df_changping['district'] = 'Changping'
@@ -204,11 +204,11 @@ def seasonal_avg(df, district_name):
     }).reset_index().assign(District=district_name)
 
 # load data
-df_aotizhongxin_new = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/df_aotizhongxin_new.csv')
-df_changping_new = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/df_changping_new.csv')
-df_dongsi_new = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/df_dongsi_new.csv')
-df_shunyi_new = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/df_shunyi_new.csv')
-df_tiantan_new = pd.read_csv('D:/SEMESTER 5/BANGKIT ACADEMY/MATERI BUAT BELAJAR DICODING/df_tiantan_new.csv')
+df_aotizhongxin_new = pd.read_csv('dashboard/df_aotizhongxin_new.csv')
+df_changping_new = pd.read_csv('dashboard/df_changping_new.csv')
+df_dongsi_new = pd.read_csv('dashboard/df_dongsi_new.csv')
+df_shunyi_new = pd.read_csv('dashboard/df_shunyi_new.csv')
+df_tiantan_new = pd.read_csv('dashboard/df_tiantan_new.csv')
 
 # buat data rata-rata musim
 df_aotizhongxin_avg = seasonal_avg(df_aotizhongxin_new, 'Aotizhongxin')
